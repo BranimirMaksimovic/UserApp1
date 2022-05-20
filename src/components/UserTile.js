@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const UserTile = ({ id, first_name, last_name, email, gender }) => {
   return (
     <div className="user-list-preview">
@@ -11,6 +13,9 @@ const UserTile = ({ id, first_name, last_name, email, gender }) => {
       <p>
         <strong>Gender:</strong>
         {gender}
+      </p>
+      <p>
+        <Link to={`/users/${id}`}>Go to user</Link>
       </p>
     </div>
   );
