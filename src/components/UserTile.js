@@ -16,6 +16,9 @@ const UserTile = ({ id, first_name, last_name, email, gender }) => {
       <p>
         <Link to={`/users/${id}`}>Go to user</Link>
       </p>
+      <p>
+        <Link to={`/users/delete/${id}`}>Delete user</Link>
+      </p>
     </div>
   );
 };

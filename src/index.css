@@ -41,7 +41,7 @@
 
 .user-list {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(20rem, 24rem));
+  grid-template-columns: repeat(auto-fill, minmax(20rem, 25rem));
   grid-auto-rows: minmax(12rem, 16rem);
   justify-content: center;
   align-items: center;
@@ -56,6 +56,7 @@
 }
 .user-list-preview:hover {
   box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.3);
+  background-color: rgb(216, 216, 216);
 }
 .user-list-preview p:hover {
   box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.3);
@@ -65,5 +66,29 @@
 .user-list-preview h2:hover {
   box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.3);
   color: #f1356d;
-  font-size: 22px;
+  font-size: 20px;
+}
+.user-information {
+  padding: 10px 16px;
+  margin: 20px 0;
+  max-width: 300px;
+  margin-left: 20px;
+  background-color: rgb(238, 235, 235);
+  border-radius: 10px;
+  border-bottom: 3px solid #f1356d;
+  text-align: center;
+}
+.delete-user {
+  padding: 10px 16px;
+  margin: 20px 0;
+  max-width: 300px;
+  margin-left: 20px;
+  background-color: rgb(238, 235, 235);
+  border-radius: 10px;
+  border-bottom: 3px solid #f1356d;
+  text-align: center;
+}
+.delete-btn {
+  color: #f1356d;
+  font-size: large;
 }
