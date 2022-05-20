@@ -13,12 +13,17 @@ const UserTile = ({ id, first_name, last_name, email, gender }) => {
         <strong>Gender:</strong>
         {gender}
       </p>
-      <p>
-        <Link to={`/users/${id}`}>Go to user</Link>
-      </p>
-      <p>
-        <Link to={`/users/delete/${id}`}>Delete user</Link>
-      </p>
+      <div className="user-tile-links">
+        <p>
+          <Link to={`/users/${id}`}>Go to user</Link>
+        </p>
+        <p>
+          <Link to={`/users/delete/${id}`}>Delete user</Link>
+        </p>
+        <p>
+          <Link to={`/users/update/${id}`}>Update user</Link>
+        </p>
+      </div>
     </div>
   );
 };
