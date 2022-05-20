@@ -1,5 +1,4 @@
-import { useParams } from "react-router-dom";
-import Home from "./Home";
+import { useParams, useNavigate } from "react-router-dom";
 
 const User = ({ findUser }) => {
   let { userId } = useParams();
@@ -12,6 +11,12 @@ const User = ({ findUser }) => {
 };
 
 const UserInformation = ({ id, first_name, last_name, email, gender }) => {
+  //napravio promenjivu koja koristi useNavigate func.
+  let navigate = useNavigate();
+  // funkcija koje je definisana od strane react router dom paketa, moze se procitati vise u dokumentaciji
+  // ova funkcija dozvoljava nam da se krecemo u sklop aplikacije, koristeci pre-definisane rute u App.js
+  const onFormCancel = () => navigate("/", { replace: true });
+
   return (
     <div className="user-information">
       {id}
@@ -20,7 +25,10 @@ const UserInformation = ({ id, first_name, last_name, email, gender }) => {
       </h1>
       <p> {email} </p>
       <p> {gender} </p>
-      <button onClick={<Home />}>Back to all users</button>
+      {/*dodao button za vracanje na sve korisnike*/}
+      <button className="back-btn" type="button" onClick={onFormCancel}>
+        Back to all users
+      </button>
     </div>
   );
 };

@@ -92,3 +92,17 @@
   color: #f1356d;
   font-size: large;
 }
+.back-btn {
+  color: #f1356d;
+  font-size: large;
+}
+.update-user-form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 20px;
+  padding-top: 30px;
+}
+.user-tile-links {
+  text-align: right;
+}
