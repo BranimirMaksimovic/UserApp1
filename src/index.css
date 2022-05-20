@@ -5,6 +5,7 @@
   font-family: "Quicksand";
   color: #333;
 }
+
 .navbar {
   padding: 20px;
   display: flex;
@@ -40,8 +41,9 @@
 
 .user-list {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(20rem, 22rem));
+  grid-template-columns: repeat(auto-fill, minmax(20rem, 24rem));
   grid-auto-rows: minmax(12rem, 16rem);
   justify-content: center;
   align-items: center;
+  gap: 15px;
 }
