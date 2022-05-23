@@ -88,14 +88,12 @@
   border-bottom: 3px solid #f1356d;
   text-align: center;
 }
-.delete-btn {
+.btn {
   color: #f1356d;
   font-size: large;
+  margin: 5px;
 }
-.back-btn {
-  color: #f1356d;
-  font-size: large;
-}
+
 .update-user-form {
   padding: 10px 16px;
   margin: 20px 0;

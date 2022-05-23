@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 const DeleteUser = ({ findUser, deleteUser }) => {
   let { userId } = useParams();
@@ -18,6 +18,9 @@ const DeleteUserForm = ({
   gender,
   deleteUser,
 }) => {
+  let navigate = useNavigate();
+
+  const onFormCancel = () => navigate("/", { replace: true });
   return (
     <div className="delete-user">
       <div>Brisanje usera</div>
@@ -27,8 +30,11 @@ const DeleteUserForm = ({
       </h1>
       <h2>{email}</h2>
       <h3>{gender}</h3>
-      <button className="delete-btn" onClick={() => deleteUser(id)}>
+      <button className="btn" onClick={() => deleteUser(id)}>
         Delete
+      </button>
+      <button className="btn" type="button" onClick={onFormCancel}>
+        Cancel
       </button>
     </div>
   );

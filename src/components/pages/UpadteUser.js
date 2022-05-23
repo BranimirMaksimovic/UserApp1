@@ -91,8 +91,10 @@ const UpdateUserForm = ({
           )
         }
       />
-      <button type="submit">Save</button>
-      <button type="button" onClick={onFormCancel}>
+      <button className="btn" type="submit">
+        Save
+      </button>
+      <button className="btn" type="button" onClick={onFormCancel}>
         Cancel
       </button>
     </form>
