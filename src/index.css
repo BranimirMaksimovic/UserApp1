@@ -97,12 +97,25 @@
   font-size: large;
 }
 .update-user-form {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding-left: 20px;
-  padding-top: 30px;
+  padding: 10px 16px;
+  margin: 20px 0;
+  max-width: 300px;
+  margin-left: 20px;
+  background-color: rgb(238, 235, 235);
+  border-radius: 10px;
+  border-bottom: 3px solid #f1356d;
+  text-align: center;
 }
 .user-tile-links {
   text-align: right;
+}
+.create-user-form {
+  padding: 10px 16px;
+  margin: 20px 0;
+  max-width: 300px;
+  margin-left: 20px;
+  background-color: rgb(238, 235, 235);
+  border-radius: 10px;
+  border-bottom: 3px solid #f1356d;
+  text-align: center;
 }

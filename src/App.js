@@ -7,6 +7,7 @@ import Home from "./components/pages/Home";
 import User from "./components/pages/User";
 import DeleteUser from "./components/pages/DeleteUser";
 import UpdateUser from "./components/pages/UpadteUser";
+import NewUser from "./components/pages/NewUser";
 
 function App() {
   const [users, setUsers] = useState(data.users);
@@ -26,6 +27,14 @@ function App() {
     let tempUsers = users;
     tempUsers.splice(itemIndex, 1, updatedUser);
     setUsers(tempUsers);
+    navigate("/", { replace: true });
+  };
+
+  const newUser = (newUser) => {
+    let lastUser = users[users.length - 1];
+    let newUserId = lastUser + 1;
+    let newUsers = [...users, { id: newUserId, ...newUser }];
+    setUsers(newUsers);
     navigate("/", { replace: true });
   };
 
@@ -49,6 +58,15 @@ function App() {
                 <UpdateUser
                   findUser={findUser}
                   updateUser={updateUser}
+                  availableGenders={availableGenders}
+                />
+              }
+            />
+            <Route
+              path="create"
+              element={
+                <NewUser
+                  newUser={newUser}
                   availableGenders={availableGenders}
                 />
               }
