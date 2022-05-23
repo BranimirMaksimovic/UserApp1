@@ -7,6 +7,8 @@ const Navbar = () => {
       <div className="links">
         <Link to="/">Home</Link>
         {/* <Link to=":userId">User</Link> */}
+
+        <Link to={`/users/create`}>New User</Link>
       </div>
     </nav>
   );

@@ -58,7 +58,7 @@ const UpdateUserForm = ({
   const onFormCancel = () => navigate("/", { replace: true });
 
   return (
-    <form onSubmit={onFormSubmit}>
+    <form onSubmit={onFormSubmit} className="update-user-form">
       <h1>Update user: {id}</h1>
       <InputField
         id="first_name"
