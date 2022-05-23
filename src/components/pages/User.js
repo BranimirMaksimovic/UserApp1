@@ -26,7 +26,7 @@ const UserInformation = ({ id, first_name, last_name, email, gender }) => {
       <p> {email} </p>
       <p> {gender} </p>
       {/*dodao button za vracanje na sve korisnike*/}
-      <button className="back-btn" type="button" onClick={onFormCancel}>
+      <button className="btn" type="button" onClick={onFormCancel}>
         Back to all users
       </button>
     </div>

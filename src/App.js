@@ -18,6 +18,7 @@ function App() {
 
   const deleteUser = (id) => {
     let newUsers = users.filter((user) => user.id !== id);
+
     setUsers(newUsers);
     navigate("/", { replace: true });
   };
@@ -32,9 +33,10 @@ function App() {
 
   const newUser = (newUser) => {
     let lastUser = users[users.length - 1];
-    let newUserId = lastUser + 1;
+    let newUserId = lastUser.id + 1;
     let newUsers = [...users, { id: newUserId, ...newUser }];
     setUsers(newUsers);
+    console.log(newUsers);
     navigate("/", { replace: true });
   };
 
